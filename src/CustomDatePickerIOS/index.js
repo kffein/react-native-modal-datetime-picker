@@ -27,6 +27,7 @@ export default class CustomDatePickerIOS extends Component {
     mode: 'date',
     titleIOS: 'Pick a date',
     isVisible: false,
+    modalStyle: {}
   };
 
   state = {
@@ -77,7 +78,7 @@ export default class CustomDatePickerIOS extends Component {
       </View>
     );
     return (
-      <ReactNativeModal isVisible={isVisible} style={styles.contentContainer}>
+      <ReactNativeModal isVisible={isVisible} style={[styles.contentContainer, this.props.modalStyle]}>
         <View style={[styles.datepickerContainer, datePickerContainerStyleIOS]}>
           {customTitleContainerIOS || titleContainer}
           <DatePickerIOS
