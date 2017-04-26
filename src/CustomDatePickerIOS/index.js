@@ -18,6 +18,7 @@ export default class CustomDatePickerIOS extends Component {
     onCancel: PropTypes.func.isRequired,
     titleIOS: PropTypes.string,
     isVisible: PropTypes.bool,
+    modalStyle: View.propTypes.style,
   };
 
   static defaultProps = {
